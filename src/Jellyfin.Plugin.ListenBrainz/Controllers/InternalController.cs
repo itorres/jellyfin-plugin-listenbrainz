@@ -30,6 +30,8 @@ public class InternalController : ControllerBase
     /// </summary>
     /// <param name="fileName">CSS file name.</param>
     /// <returns>CSS stylesheet file response.</returns>
+    [HttpGet]
+    [Produces("text/css")]
     [Route("styles/{fileName}")]
     public ActionResult GetStyles([FromRoute] string fileName)
     {
